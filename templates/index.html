@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Flask-SocketIO with Kafka Example</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            document.addEventListener('DOMContentLoaded', (event) => {
+                var socket = io();
+                socket.on('connect', function() {
+                    console.log('Connected to server');
+                });
+                socket.on('my response', function(msg) {
+                    console.log('Received response: ' + msg.data);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Flask-SocketIO with Kafka Example</h1>
+    </body>
+</html>
